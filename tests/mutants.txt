@@ -1,0 +1,6 @@
+src/subprocess/run.mojo|not _drain(pe[0], err, tmp):|not _drain(pe[0], out, tmp):
+src/subprocess/run.mojo|    for t in [(i, 0), (o, 1), (e, 2)]:|    for t in [(i, 0), (o, 1), (e, 1)]:
+src/subprocess/run.mojo|                sent += n|                sent += n + 1
+src/subprocess/run.mojo|    if check and rc != 0:|    if check and rc > 0 and rc != 7:
+src/subprocess/run.mojo|        _ = kill(pid, SIGKILL)|        _ = kill(pid, 0)
+src/subprocess/run.mojo|var ip = ps.add(pidfd, POLLIN) if alive and pidfd >= 0 else -1|var ip = -1
