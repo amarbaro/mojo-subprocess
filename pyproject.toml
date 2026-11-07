@@ -1,6 +1,6 @@
 [project]
 name = "mojo-subprocess"
-version = "0.1.0"
+version = "0.1.1"
 description = "subprocess.run for Mojo: capture stdout/stderr, input, timeout, cwd/env, same results as Python"
 license = "Apache-2.0"
 requires-python = ">=3.11,<3.15"
