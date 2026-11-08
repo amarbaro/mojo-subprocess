@@ -3,11 +3,9 @@
 # Ends with "PASS n/m" (or "FAIL k/m"): the README checks badge parses that line.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-if [ -z "${MOJO:-}" ]; then
-  command -v uv >/dev/null || { echo "FAIL setup: uv not installed"; exit 1; }
-  uv sync -q || { echo "FAIL setup: uv sync"; exit 1; }
-  MOJO=.venv/bin/mojo
-fi
+command -v uv >/dev/null || { echo "FAIL setup: uv not installed"; exit 1; }
+uv sync -q || { echo "FAIL setup: uv sync"; exit 1; }  # also with MOJO= set: the oracle's Python lives in this venv
+MOJO=${MOJO:-.venv/bin/mojo}
 "$MOJO" --version
 [ -x .venv/bin/python ] && export ORACLE_PY=${ORACLE_PY:-.venv/bin/python}
 mkdir -p .work/t
