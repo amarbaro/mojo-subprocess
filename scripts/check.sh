@@ -21,5 +21,6 @@ for c in $($PY -I tools/oracle.py --list); do
   n=$((n+1))
 done
 echo "scenarios: $n, each twice; failures: $fail"
+[ "$n" -gt 0 ] || { echo "FAIL check: the oracle listed no scenarios (ORACLE_PY needs the oracle's Python modules)"; exit 1; }
 [ "$fail" -eq 0 ] || { echo "FAIL check: $fail"; exit 1; }
 echo "PASS all"
