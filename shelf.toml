@@ -1,0 +1,5 @@
+name = "mojo-subprocess"
+version = "0.1.2"
+description = "subprocess.run for Mojo: capture stdout/stderr, input, timeout, cwd/env, same results as Python"
+tags = ["mojo", "process", "shell"]
+tins = ["mojo-posix"]
