@@ -1,5 +1,7 @@
 # mojo-subprocess
 
+> **Moved:** this library now lives in [amarbaro/mojo-libs](https://github.com/amarbaro/mojo-libs/tree/main/libs/posix) as `posix.subprocess`.
+
 <!-- badges -->
 [![ci](https://github.com/amarbaro/mojo-subprocess/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/amarbaro/mojo-subprocess/actions/workflows/ci.yml) [![latest release](https://img.shields.io/github/v/release/amarbaro/mojo-subprocess)](https://github.com/amarbaro/mojo-subprocess/releases/latest) [![license](https://img.shields.io/github/license/amarbaro/mojo-subprocess)](https://github.com/amarbaro/mojo-subprocess/blob/main/LICENSE) [![checks](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/amarbaro/mojo-subprocess/badges/checks.json)](https://github.com/amarbaro/mojo-subprocess/actions/workflows/ci.yml)
 <!-- /badges -->
